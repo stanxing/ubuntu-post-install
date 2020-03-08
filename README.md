@@ -17,8 +17,8 @@
 - 清理不必要的软件
 
 本项目包含两个目录和一个 `ubuntu-post-install.sh` 启动脚本，结构简单明了：
-- functions 下的脚本都会按照顺序执行， 如果退出码为 1 会记录打印 error 日志
-- files 下存放一些文件可能供脚本操作，比如 .gitconfig 等
+- functions 下的脚本都会按照顺序执行， 如果某个脚本报错会使得整个脚本退出，方便定位错误原因，整个脚本可以重复执行。
+- files 下存放一些文件可能供脚本操作，比如 .gitconfig 等。
 
 ## 使用
 
@@ -29,7 +29,7 @@
 - 按照下面命令执行脚本
 
     ```shell
-    git@github.com:stanxing/ubuntu-post-install.git
+    git clone git@github.com:stanxing/ubuntu-post-install.git
     cd ubuntu-post-install
     ./ubuntu-post-install.sh
     ```
